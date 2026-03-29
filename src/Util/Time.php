@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Micromagicman\TelegramWebApp\Util;
 
 /**
@@ -19,7 +21,7 @@ class Time
     /**
      * Checking that the provided unixtime has passed
      */
-    public function expired( int $unixTime ): int
+    public function expired(int $unixTime): bool
     {
         return $unixTime < $this->now();
     }

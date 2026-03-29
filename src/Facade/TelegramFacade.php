@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Micromagicman\TelegramWebApp\Facade;
 
 use Illuminate\Http\Request;
@@ -8,7 +10,7 @@ use Micromagicman\TelegramWebApp\Service\TelegramWebAppService;
 
 /**
  * A static proxy to {@link TelegramWebAppService} service
- * @method static getWebAppUser( ?Request $request = null )
+ * @method static getWebAppUser(?Request $request = null)
  */
 class TelegramFacade extends Facade
 {
