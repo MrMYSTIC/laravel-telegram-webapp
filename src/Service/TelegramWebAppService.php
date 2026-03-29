@@ -146,7 +146,7 @@ class TelegramWebAppService
     private function telegramInitDataValid(array $telegramInitData): bool
     {
         return array_key_exists(self::USER_QUERY_PARAMETER_KEY, $telegramInitData)
-            && !$this->authDateExpired($telegramInitData[self::AUTH_DATE_QUERY_PARAMETER_KEY])
+            && !$this->authDateExpired((int) $telegramInitData[self::AUTH_DATE_QUERY_PARAMETER_KEY])
         ;
     }
 
